@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Node.js Express REST API</title>
+    <style>
+      body * {
+        box-sizing: border-box;
+      }
+      fieldset.firstone {
+        width: 100%;
+        border: 1px #ccc solid;
+        margin: auto;
+        text-align: center;
+      }
+      form input {
+        display: block;
+        width: 250px;
+        padding: 10px;
+      }
+      form label {
+        padding: 10px 0 5px;
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+      form input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background: #0065de;
+        border: 0;
+        font-weight: bold;
+        color: #fff;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="http://localhost:3004/services" method="post">
+      <fieldset class="firstone">
+        <label for="name">
+          Servicename
+          <input type="text" name="service_name" />
+        </label>
+        <label for="email"
+          >username
+          <input type="text" name="username" />
+        </label>
+        <label for="name"
+          >password
+          <input type="password" name="password" />
+        </label>
+        <input type="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>

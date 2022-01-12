@@ -1,0 +1,16 @@
+.subUserList {
+  background: #fff;
+}
+.subUserList ul,
+.subUserList ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.subUserList ul li {
+  padding: 8px;
+}
+.subUserList ul li:nth-child(2n) {
+  background: #ececec;
+  color: #333;
+}
