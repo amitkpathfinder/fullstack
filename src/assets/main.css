@@ -1,0 +1,1756 @@
+/*! tailwindcss v2.2.17 | MIT License | https://tailwindcss.com */
+
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+  font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+}
+
+/*
+Grouping content
+================
+*/
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+pre {
+  font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+/*
+Tabular data
+============
+*/
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button { /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+
+h1,
+h2,
+h3,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+
+/**
+ * Inherit font-family and line-height from `html` so users can set them as
+ * a class directly on the `html` element.
+ */
+
+body {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: currentColor; /* 2 */
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
+}
+
+input::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/**
+ * Override legacy focus reset from Normalize with modern Firefox focus styles.
+ *
+ * This is actually an improvement over the new defaults in Firefox in our testing,
+ * as it triggers the better focus styles even for links, which still use a dotted
+ * outline in Firefox by default.
+ */
+
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+
+button,
+input {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/**
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ * 
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ * 
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+ */
+
+img,
+svg {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their intrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */
+
+*, ::before, ::after {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-80 {
+  margin-top: 20rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-gray-50 {
+  --tw-border-opacity: 1;
+  border-color: rgba(249, 250, 251, var(--tw-border-opacity));
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+*, ::before, ::after {
+  --tw-shadow: 0 0 #0000;
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline-black {
+  outline: 2px dotted black;
+  outline-offset: 2px;
+}
+
+*, ::before, ::after {
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+}
+
+.cred {
+  color: red;
+}
+
+/*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
+
+.button,
+.input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 0.875rem;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  vertical-align: top;
+}
+
+.button:focus,
+.input:focus,
+.button:active,
+.input:active {
+  outline: none;
+}
+
+.button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+
+.loader {
+  -webkit-animation: spinAround 500ms infinite linear;
+          animation: spinAround 500ms infinite linear;
+  border: 2px solid #c8ceda;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
+
+
+.modal {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+} /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+
+
+body,
+p,
+ul,
+li,
+pre,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+aside,
+footer,
+header,
+section {
+  display: block;
+}
+
+body,
+button,
+input {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: monospace;
+}
+
+body {
+  color: #0a2463;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  color: #ff4564;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff1f44;
+}
+
+code {
+  background-color: #f2f5fa;
+  color: #f80029;
+  font-size: 0.875em;
+  font-weight: normal;
+  padding: 0.25em 0.5em 0.25em;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  background-color: #f2f5fa;
+  color: #0a2463;
+  font-size: 0.875em;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+pre code {
+  background-color: transparent;
+  color: currentColor;
+  font-size: 1em;
+  padding: 0;
+}
+
+@-webkit-keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.button {
+  background-color: #fff;
+  border-color: #dadfe9;
+  border-width: 1px;
+  color: #0a2463;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button:hover {
+  border-color: #ff1f44;
+  color: #ff1f44;
+}
+
+.button:focus {
+  border-color: #ff1f44;
+  color: #ff1f44;
+}
+
+.button:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(255, 69, 100, 0.25);
+}
+
+.button:active {
+  border-color: #ff1f44;
+  color: #ff1f44;
+}
+
+.button.is-text {
+  background-color: transparent;
+  border-color: transparent;
+  color: #0a2463;
+  text-decoration: underline;
+}
+
+.button.is-text:hover,
+.button.is-text:focus {
+  background-color: #f2f5fa;
+  color: #0a2463;
+}
+
+.button.is-text:active {
+  background-color: #e0e7f3;
+  color: #0a2463;
+}
+
+.button.is-primary {
+  background-color: #ff4564;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary:hover {
+  background-color: #ff3859;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary:focus {
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(255, 69, 100, 0.25);
+}
+
+.button.is-primary:active {
+  background-color: #ff2c4f;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-info {
+  background-color: #45c1ff;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-info:hover {
+  background-color: #38bdff;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-info:focus {
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-info:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(69, 193, 255, 0.25);
+}
+
+.button.is-info:active {
+  background-color: #2cb9ff;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-fullwidth {
+  display: flex;
+  width: 100%;
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.buttons .button {
+  margin-bottom: 0.5rem;
+}
+
+.buttons .button:not(:last-child):not(.is-fullwidth) {
+  margin-right: 0.5rem;
+}
+
+.buttons:last-child {
+  margin-bottom: -0.5rem;
+}
+
+.buttons:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.buttons.is-centered {
+  justify-content: center;
+}
+
+.buttons.is-centered:not(.has-addons) .button:not(.is-fullwidth) {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+}
+
+.container.is-fluid {
+  max-width: none !important;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .container:not(.is-max-desktop) {
+    max-width: 1088px;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1088px;
+  }
+}
+
+@-webkit-keyframes moveIndeterminate {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes moveIndeterminate {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.tag:not(body) {
+  align-items: center;
+  background-color: #f2f5fa;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+}
+
+.tag:not(body).is-primary {
+  background-color: #ff4564;
+  color: #fff;
+}
+
+.tag:not(body).is-info {
+  background-color: #45c1ff;
+  color: #fff;
+}
+
+a.tag:hover {
+  text-decoration: underline;
+}
+
+.title {
+  word-break: break-word;
+}
+
+
+.title span {
+  font-weight: inherit;
+}
+
+.title .tag {
+  vertical-align: middle;
+}
+
+.title {
+  color: #0a2463;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+.title.is-1 {
+  font-size: 4rem;
+}
+
+.title.is-5 {
+  font-size: 1.25rem;
+}
+
+.number {
+  align-items: center;
+  background-color: #f2f5fa;
+  border-radius: 290486px;
+  display: inline-flex;
+  font-size: 1.25rem;
+  height: 2em;
+  justify-content: center;
+  margin-right: 1.5rem;
+  min-width: 2.5em;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+.input {
+  background-color: #fff;
+  border-color: #dadfe9;
+  border-radius: 5px;
+  color: #0a2463;
+}
+
+.input::-moz-placeholder {
+  color: rgba(10, 36, 99, 0.3);
+}
+
+.input::-webkit-input-placeholder {
+  color: rgba(10, 36, 99, 0.3);
+}
+
+.input:-moz-placeholder {
+  color: rgba(10, 36, 99, 0.3);
+}
+
+.input:-ms-input-placeholder {
+  color: rgba(10, 36, 99, 0.3);
+}
+
+.input:hover {
+  border-color: #e6eaf1;
+}
+
+.input:focus,
+.input:active {
+  border-color: #ff4564;
+  box-shadow: 0 0 0 0.125em rgba(255, 69, 100, 0.25);
+}
+
+.input {
+  box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+  max-width: 100%;
+  width: 100%;
+}
+
+.is-primary.input {
+  border-color: #ff4564;
+}
+
+.is-primary.input:focus,
+.is-primary.input:active {
+  box-shadow: 0 0 0 0.125em rgba(255, 69, 100, 0.25);
+}
+
+.is-info.input {
+  border-color: #45c1ff;
+}
+
+.is-info.input:focus,
+.is-info.input:active {
+  box-shadow: 0 0 0 0.125em rgba(69, 193, 255, 0.25);
+}
+
+.is-fullwidth.input {
+  display: block;
+  width: 100%;
+}
+
+.label {
+  color: #0a2463;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.label:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.menu {
+  font-size: 0.875rem;
+}
+
+.menu-list {
+  line-height: 1.25;
+}
+
+.menu-list a {
+  border-radius: 0.125rem;
+  color: #0a2463;
+  display: block;
+  padding: 0.5em 0.75em;
+}
+
+.menu-list a:hover {
+  background-color: #f2f5fa;
+  color: #0a2463;
+}
+
+.menu-list li ul {
+  border-left: 1px solid #dadfe9;
+  margin: 0.75em;
+  padding-left: 0.75em;
+}
+
+.modal {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 40;
+}
+
+.navbar {
+  background-color: #fff;
+  min-height: 3.25rem;
+  position: relative;
+  z-index: 30;
+}
+
+.navbar.is-primary {
+  background-color: #ff4564;
+  color: #fff;
+}
+
+.navbar.is-primary .navbar-brand > .navbar-item {
+  color: #fff;
+}
+
+.navbar.is-primary .navbar-brand > a.navbar-item:focus,
+.navbar.is-primary .navbar-brand > a.navbar-item:hover {
+  background-color: #ff2c4f;
+  color: #fff;
+}
+
+.navbar.is-primary .navbar-burger {
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .navbar.is-primary .navbar-end > .navbar-item {
+    color: #fff;
+  }
+
+  
+  .navbar.is-primary .navbar-end > a.navbar-item:focus,
+  .navbar.is-primary .navbar-end > a.navbar-item:hover {
+    background-color: #ff2c4f;
+    color: #fff;
+  }
+}
+
+.navbar.is-info {
+  background-color: #45c1ff;
+  color: #fff;
+}
+
+.navbar.is-info .navbar-brand > .navbar-item {
+  color: #fff;
+}
+
+.navbar.is-info .navbar-brand > a.navbar-item:focus,
+.navbar.is-info .navbar-brand > a.navbar-item:hover {
+  background-color: #2cb9ff;
+  color: #fff;
+}
+
+.navbar.is-info .navbar-burger {
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .navbar.is-info .navbar-end > .navbar-item {
+    color: #fff;
+  }
+
+  
+  .navbar.is-info .navbar-end > a.navbar-item:focus,
+  .navbar.is-info .navbar-end > a.navbar-item:hover {
+    background-color: #2cb9ff;
+    color: #fff;
+  }
+}
+
+.navbar > .container {
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+}
+
+.navbar-brand {
+  align-items: stretch;
+  display: flex;
+  flex-shrink: 0;
+  min-height: 3.25rem;
+}
+
+.navbar-brand a.navbar-item:focus,
+.navbar-brand a.navbar-item:hover {
+  background-color: transparent;
+}
+
+.navbar-burger {
+  color: #0a2463;
+  cursor: pointer;
+  display: block;
+  height: 3.25rem;
+  position: relative;
+  width: 3.25rem;
+  margin-left: auto;
+}
+
+.navbar-burger span {
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  left: calc(50% - 8px);
+  position: absolute;
+  transform-origin: center;
+  transition-duration: 86ms;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+  width: 16px;
+}
+
+.navbar-burger span:nth-child(1) {
+  top: calc(50% - 6px);
+}
+
+.navbar-burger span:nth-child(2) {
+  top: calc(50% - 1px);
+}
+
+.navbar-burger span:nth-child(3) {
+  top: calc(50% + 4px);
+}
+
+.navbar-burger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.navbar-menu {
+  display: none;
+}
+
+.navbar-item {
+  color: #0a2463;
+  display: block;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+}
+
+a.navbar-item {
+  cursor: pointer;
+}
+
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #0a2463;
+}
+
+.navbar-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.navbar-item img {
+  max-height: 1.75rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar > .container {
+    display: block;
+  }
+
+  .navbar-brand .navbar-item {
+    align-items: center;
+    display: flex;
+  }
+
+  .navbar-menu {
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar,
+  .navbar-menu,
+  .navbar-end {
+    align-items: stretch;
+    display: flex;
+  }
+
+  .navbar {
+    min-height: 3.25rem;
+  }
+
+  .navbar.is-transparent a.navbar-item:focus,
+  .navbar.is-transparent a.navbar-item:hover {
+    background-color: transparent !important;
+  }
+
+  .navbar-burger {
+    display: none;
+  }
+
+  .navbar-item {
+    align-items: center;
+    display: flex;
+  }
+
+  .navbar-menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .navbar-end {
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .navbar > .container .navbar-brand,
+  .container > .navbar .navbar-brand {
+    margin-left: -0.75rem;
+  }
+
+  .navbar > .container .navbar-menu,
+  .container > .navbar .navbar-menu {
+    margin-right: -0.75rem;
+  }
+}
+
+.has-text-white {
+  color: #fff !important;
+}
+
+a.has-text-white:hover,
+a.has-text-white:focus {
+  color: #e6e6e6 !important;
+}
+
+.has-background-white {
+  background-color: #fff !important;
+}
+
+.has-text-light {
+  color: #f2f5fa !important;
+}
+
+a.has-text-light:hover,
+a.has-text-light:focus {
+  color: #cdd9ec !important;
+}
+
+.has-text-dark {
+  color: #0a2463 !important;
+}
+
+a.has-text-dark:hover,
+a.has-text-dark:focus {
+  color: #051335 !important;
+}
+
+.has-background-dark {
+  background-color: #0a2463 !important;
+}
+
+.has-text-info {
+  color: #45c1ff !important;
+}
+
+a.has-text-info:hover,
+a.has-text-info:focus {
+  color: #12b0ff !important;
+}
+
+.has-text-grey-dark {
+  color: #838ea4 !important;
+}
+
+.is-flex-direction-column {
+  flex-direction: column !important;
+}
+
+.is-align-items-center {
+  align-items: center !important;
+}
+
+.is-relative {
+  position: relative !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mx-3 {
+  margin-left: 0.75rem !important;
+  margin-right: 0.75rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.mt-8 {
+  margin-top: 2rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem !important;
+}
+
+.mt-32 {
+  margin-top: 8rem !important;
+}
+
+.mt-80 {
+  margin-top: 20rem !important;
+}
+
+.p-0 {
+  padding: 0px !important;
+}
+
+.pl-0 {
+  padding-left: 0px !important;
+}
+
+.px-0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.py-5 {
+  padding-top: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
+}
+
+.px-6 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.py-6 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.pb-20 {
+  padding-bottom: 5rem !important;
+}
+
+.is-size-5 {
+  font-size: 1.25rem !important;
+}
+
+.is-size-7 {
+  font-size: 1rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  .is-size-2-mobile {
+    font-size: 3rem !important;
+  }
+}
+
+.has-text-centered {
+  text-align: center !important;
+}
+
+.has-text-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.is-flex {
+  display: flex !important;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .is-hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .is-hidden-touch {
+    display: none !important;
+  }
+}
+
+.section {
+  padding: 3rem 1.5rem;
+}
+
+.footer {
+  background-color: #fafafa;
+  padding: 3rem 1.5rem 6rem;
+} /*!
+   * Shuffle CSS Extension for Bulma
+   * Copyright 2021 The Shuffle Team
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   */
+
+.navbar-item {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.is-absolute {
+  position: absolute;
+}
+
+.is-relative {
+  position: relative;
+}
+
+.is-fixed {
+  position: fixed;
+}
+
+.is-top-0 {
+  top: 0;
+}
+
+.is-right-0 {
+  right: 0;
+}
+
+.is-bottom-0 {
+  bottom: 0;
+}
+
+.is-left-0 {
+  left: 0;
+}
+
+.is-inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .mb-12-desktop {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.has-mw-md {
+  max-width: 28rem;
+}
+
+.has-mw-3xl {
+  max-width: 48rem;
+}
+
+.has-mw-5xl {
+  max-width: 64rem;
+}
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@media (min-width: 768px) {
+  .md\:p-1 {
+    padding: 0.25rem;
+  }
+}
